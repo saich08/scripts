@@ -1,7 +1,7 @@
 # update package list
 sudo apt-get update
 
-# install dependencies
+# install common tools
 sudo apt-get install -y \
     curl \
     docker.io \
@@ -14,6 +14,11 @@ sudo apt-get install -y \
 # start and enable docker
 sudo systemctl start docker
 sudo systemctl enable docker
+
+# install python
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get install python3.9
+sudo apt-get install python3-pip
 
 # install azure-cli
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash

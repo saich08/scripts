@@ -1,7 +1,7 @@
 # update package list
 sudo apt-get update
 
-# install dependencies
+# install common tools
 sudo apt-get install -y \
     curl \
     docker.io \
@@ -18,7 +18,7 @@ sudo systemctl enable docker
 # install vscode
 sudo snap install code --classic
 
-# install pycharm
+# install pycharm-community
 sudo snap install pycharm-community --classic
 
 # install azure-cli
