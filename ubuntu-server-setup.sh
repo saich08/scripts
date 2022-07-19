@@ -1,33 +1,22 @@
 # update package list
 sudo apt-get update
 
-# install curl
-sudo apt-get install -y curl
+# install dependencies
+sudo apt-get install -y \
+    curl \
+    docker.io \
+    git \
+    jq \
+    make \
+    tree \
+    python3-distutils
 
-# install jq
-sudo apt-get install -y jq
-
-# install make
-sudo apt-get install -y make
-
-# install tree
-sudo apt-get install -y tree
-
-# install git
-sudo apt-get install -y git
-
-# install python3-distutils
-sudo apt-get install -y python3-distutils
+# start and enable docker
+sudo systemctl start docker
+sudo systemctl enable docker
 
 # install azure-cli
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-
-# install docker
-sudo apt-get install -y docker.io
-
-# start docker
-sudo systemctl start docker
-sudo systemctl enable docker
 
 # install kubernetes
 sudo apt-get update && sudo apt-get install -y apt-transport-https
